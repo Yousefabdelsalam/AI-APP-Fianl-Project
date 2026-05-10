@@ -48,3 +48,5 @@ WEATHER_API_KEY="your_openweathermap_key"
 - **Password**: `admin123`
 
 
+Special thanks to @[ahmed123](https://github.com/Nada-Ellakany) for backend support.
+
