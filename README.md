@@ -47,7 +47,7 @@ WEATHER_API_KEY="your_openweathermap_key"
 - **Email**: `admin@tourism.com`
 - **Password**: `admin123`
 
-proud to collaborate with @[Nada Ellakany](https://github.com/Nada-Ellakany) on this project.
+proud to collaborate with [Nada Ellakany](https://github.com/Nada-Ellakany) on this project.
 Great teamwork, creativity, and late-night debugging sessions
 
 
