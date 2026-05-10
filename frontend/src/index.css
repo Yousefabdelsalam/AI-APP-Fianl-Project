@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Styles ── */
+@layer base {
+  body {
+    @apply bg-navy-950 text-white font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyan-600;
+  }
+}
+
+/* ── Component Styles ── */
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl 
+           hover:bg-white/10 hover:border-cyan-400/30 
+           transition-all duration-500 ease-out;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-400 
+           text-navy-950 font-semibold rounded-xl
+           hover:from-cyan-400 hover:to-cyan-300 
+           transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white/10 border border-white/20 
+           text-white font-semibold rounded-xl
+           hover:bg-white/20 hover:border-cyan-400/30
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-gold {
+    @apply px-6 py-3 bg-gradient-to-r from-gold-500 to-gold-400 
+           text-navy-950 font-semibold rounded-xl
+           hover:from-gold-400 hover:to-gold-300 
+           transform hover:scale-105 hover:shadow-lg hover:shadow-gold-500/25
+           transition-all duration-300 ease-out;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl
+           text-white placeholder:text-white/30
+           focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50
+           transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-gold {
+    @apply bg-gradient-to-r from-gold-400 to-gold-200 bg-clip-text text-transparent;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-bold mb-4;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+}
+
+/* ── Leaflet overrides ── */
+.leaflet-container {
+  @apply rounded-2xl;
+  z-index: 1;
+}
+
+/* ── Animations ── */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.skeleton {
+  @apply bg-white/5 rounded-xl overflow-hidden relative;
+}
+.skeleton::after {
+  content: '';
+  @apply absolute inset-0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
