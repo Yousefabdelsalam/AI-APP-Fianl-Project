@@ -47,5 +47,4 @@ WEATHER_API_KEY="your_openweathermap_key"
 - **Email**: `admin@tourism.com`
 - **Password**: `admin123`
 
----
-Built with ❤️ by Antigravity.
+
